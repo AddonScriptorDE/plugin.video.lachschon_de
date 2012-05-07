@@ -12,7 +12,6 @@ def index():
         addDir(translation(30002),"http://www.lachschon.de/gallery/mostvoted/?set_gallery_type=video&set_image_type=small&page=1",1,"")
         addDir(translation(30003),"http://www.lachschon.de/gallery/top/?set_gallery_type=video&set_image_type=small&page=1",1,"")
         xbmcplugin.endOfDirectory(pluginhandle)
-        if (xbmc.getSkinDir() == "skin.confluence" or xbmc.getSkinDir() == "skin.touched"): xbmc.executebuiltin('Container.SetViewMode(50)')
 
 def listVideos(url):
         content = getUrl(url)
@@ -35,7 +34,6 @@ def listVideos(url):
         if urlNextPage!="":
           addDir("Next Page",urlNextPage,1,'')
         xbmcplugin.endOfDirectory(pluginhandle)
-        if (xbmc.getSkinDir() == "skin.confluence" or xbmc.getSkinDir() == "skin.touched"): xbmc.executebuiltin('Container.SetViewMode(500)')
 
 def playVideo(url):
         content = getUrl(url)
